@@ -4,7 +4,9 @@ import ProductPurchaseCard from './product-purchase-card/product-purchase-card';
 import AggrigateRating from './components/aggrigate-rating/aggrigate-rating';
 import ProductReviewCard from './product-review-card/product-review-card';
 import DLayout from './components/dlayout/dlayout';
+import LayoutRender from './components/layout-render/layout-render';
 import { Container } from 'react-bootstrap';
+import Layout from './components/layout/layout';
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
 
@@ -18,14 +20,15 @@ export const App = () => {
     <Container>
       <div style={{ textAlign: 'center' }}>
         <h1>Welcome react-express</h1>
-
+        <Layout/>
+        <LayoutRender/>
         <DLayout
           features={[
+            <AggrigateRating />,
             <ProductReviewCard />,
             <ProductPurchaseCard />,
-            <AggrigateRating />,
           ]}
-          cols={['4', '4', '4']}
+          cols={['4', '5', '3']}
         />
         {/* <img
           width="450"

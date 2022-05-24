@@ -8,8 +8,14 @@ export interface DLayoutProps {
 }
 
 DLayout.defaultProps = {
-  cols: ['z'],
+  cols: ['4','4','4'],
   features: [
+    <div>
+      <h1>{'hi'}</h1>
+    </div>,
+    <div>
+      <h1>{'hi'}</h1>
+    </div>,
     <div>
       <h1>{'hi'}</h1>
     </div>,
