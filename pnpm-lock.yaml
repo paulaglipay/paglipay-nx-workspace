@@ -47,6 +47,7 @@ specifiers:
   react: 18.1.0
   react-bootstrap: ^2.3.0
   react-dom: 18.1.0
+  react-icons: ^4.3.1
   react-test-renderer: 18.1.0
   regenerator-runtime: 0.13.7
   ts-jest: 27.1.4
@@ -62,6 +63,7 @@ dependencies:
   react: 18.1.0
   react-bootstrap: 2.4.0_i6xcbgvvylvakhe2evaee3dlf4
   react-dom: 18.1.0_react@18.1.0
+  react-icons: 4.3.1_react@18.1.0
   regenerator-runtime: 0.13.7
   tslib: 2.4.0
 
@@ -15431,6 +15433,14 @@ packages:
       react-fast-compare: 3.2.0
       shallowequal: 1.1.0
     dev: true
+
+  /react-icons/4.3.1_react@18.1.0:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.1.0
+    dev: false
 
   /react-inspector/5.1.1_react@18.1.0:
     resolution: {integrity: sha512-GURDaYzoLbW8pMGXwYPDBIv6nqei4kK7LPRZ9q9HCZF54wqXz/dnylBp/kfE9XmekBhHvLDdcYeyIwSrvtOiWg==}
