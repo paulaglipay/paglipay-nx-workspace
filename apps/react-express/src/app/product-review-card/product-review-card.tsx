@@ -8,7 +8,7 @@ export interface ProductReviewCardProps {}
 export function ProductReviewCard(props: ProductReviewCardProps) {
   return (
 <div style={{ textAlign: "left" }}>
-      <span>
+      {/* <span>
         <Image
           className="profile"
           src={profilePic != "" ? profilePic : "/man.jpg"}
@@ -30,7 +30,7 @@ export function ProductReviewCard(props: ProductReviewCardProps) {
       <p style={{ fontSize: 12 }}>
         <br />
       </p>
-      <p>{comment}</p>
+      <p>{comment}</p> */}
     </div>
   );
 }
