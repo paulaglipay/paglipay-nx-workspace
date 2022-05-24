@@ -1,4 +1,5 @@
 import styles from './product-purchase-card.module.css';
+import { Button } from "react-bootstrap";
 
 /* eslint-disable-next-line */
 export interface ProductPurchaseCardProps {}
@@ -15,9 +16,9 @@ export function ProductPurchaseCard(props: ProductPurchaseCardProps) {
       <br />
 
       <br />
-      <button>Add to Cart</button>
+      <Button>Add to Cart</Button>
       <br /><br />
-      <button>Buy Now</button>
+      <Button>Buy Now</Button>
       <br /><br />
       <h5>
         <strong>title</strong>
