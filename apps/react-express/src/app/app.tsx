@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Message } from '@create-nx-workspace/api-interfaces';
 import ProductPurchaseCard from './product-purchase-card/product-purchase-card';
 import AggrigateRating from './components/aggrigate-rating/aggrigate-rating';
+import ProductReviewCard from './product-review-card/product-review-card';
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
 
@@ -15,6 +16,7 @@ export const App = () => {
     <>
       <div style={{ textAlign: 'center' }}>
         <h1>Welcome react-express</h1>
+        <ProductReviewCard/>
         <ProductPurchaseCard/>
         <AggrigateRating />
         <img

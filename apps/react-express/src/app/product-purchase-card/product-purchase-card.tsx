@@ -2,7 +2,13 @@ import styles from './product-purchase-card.module.css';
 import { Button } from "react-bootstrap";
 
 /* eslint-disable-next-line */
-export interface ProductPurchaseCardProps {}
+export interface ProductPurchaseCardProps {
+  title:string
+}
+
+ProductPurchaseCard.defaultProps = {
+  title: "Default Title"
+};
 
 export function ProductPurchaseCard(props: ProductPurchaseCardProps) {
   return (
@@ -21,7 +27,7 @@ export function ProductPurchaseCard(props: ProductPurchaseCardProps) {
       <Button>Buy Now</Button>
       <br /><br />
       <h5>
-        <strong>title</strong>
+        <strong>{props.title}</strong>
       </h5>
       <p style={{ fontSize: 12 }}>
         Reviewed in the United States on April 29, 2021
