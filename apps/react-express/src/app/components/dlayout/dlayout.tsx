@@ -1,13 +1,41 @@
 import styles from './dlayout.module.css';
+import { Col, Row, Container, Image, Card } from 'react-bootstrap';
 
 /* eslint-disable-next-line */
-export interface DLayoutProps {}
+export interface DLayoutProps {
+  cols: string[];
+  features: any[];
+}
+
+DLayout.defaultProps = {
+  cols: ['z'],
+  features: [
+    <div>
+      <h1>{'hi'}</h1>
+    </div>,
+  ],
+};
 
 export function DLayout(props: DLayoutProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to DLayout!</h1>
-    </div>
+    <Row>
+      {props.cols.map((e: any, i: any) => {
+        if (e === 'z') {
+          e = 12;
+        } else if (e === '0') {
+          e = 10;
+        }
+        return (
+          <Col
+            style={{ transition: '350ms', paddingBottom: '25px' }}
+            key={`${i}`}
+            lg={e}
+          >
+            {props.features[i]}
+          </Col>
+        );
+      })}
+    </Row>
   );
 }
 
