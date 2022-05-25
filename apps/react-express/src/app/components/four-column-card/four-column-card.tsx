@@ -1,13 +1,10 @@
 import Layout from '../layout/layout';
-import styles from './three-column-card.module.css';
+import styles from './four-column-card.module.css';
 
 /* eslint-disable-next-line */
-export interface ThreeColumnCardProps {
-  jsonData:any[];
-  sections:any[];
-}
+export interface FourColumnCardProps {}
 
-export function ThreeColumnCard(props: ThreeColumnCardProps) {
+export function FourColumnCard(props: FourColumnCardProps) {
   return (
     <Layout
       jsonData={[
@@ -33,14 +30,14 @@ export function ThreeColumnCard(props: ThreeColumnCardProps) {
             title: '4',
             rating: 4,
           },
-        },
+        }
       ]}
       sections={[
         {
           title: 'Section Title',
           fluid: true,
-          cols: ['4', '4', '4', '4', '4', '4'],
-          featureTypesArry: ['a', 'a','a'],
+          cols: ['3','3','3','3'],
+          featureTypesArry: ['a', 'a', 'a', 'a'],
         },
         {
           title: 'Section Title',
@@ -53,4 +50,4 @@ export function ThreeColumnCard(props: ThreeColumnCardProps) {
   );
 }
 
-export default ThreeColumnCard;
+export default FourColumnCard;
