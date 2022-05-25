@@ -12,21 +12,21 @@ export interface LayoutProps {
 }
 Layout.defaultProps = {
   jsonData: [
-    // {
-    //   code: 'a',
-    //   componentType: 'CardPlaceholderProps',
-    //   props: {
-    //     title: 'CardPlaceholderProps',
-    //   },
-    // },
-    // {
-    //   code: "a",
-    //   componentType: "res",
-    //   props: {
-    //     title: "I Love It! Five Stars",
-    //     rating: 5,
-    //   },
-    // },
+    {
+      code: 'a',
+      componentType: 'CardPlaceholder',
+      props: {
+        title: 'CardPlaceholderProps',
+      },
+    },
+    {
+      code: "5",
+      componentType: "ProductReviewCard",
+      props: {
+        title: "I Love It! Five Stars",
+        rating: 5,
+      },
+    },
     
   ],
   sections: [
@@ -48,10 +48,8 @@ export function Layout(props: LayoutProps) {
   const components = {
     // CardPlaceholder:<CardPlaceholder/>,
     // ProductReviewCard: <ProductReviewCard/>,
-    // CardPlaceholder:lazy(() => import('../card-placeholder/card-placeholder')),
-    // ProductReviewCard: lazy(() => import('../../product-review-card/product-review-card')),
-    
 
+    CardPlaceholder: require('../card-placeholder/card-placeholder').default,
     ProductReviewCard: require('../ProductReviewCard/ProductReviewCard').default,
     // ProductPurchaseCard: require('./ProductPurchaseCard').default,
     // ProductImages: require('./ProductImages').default,

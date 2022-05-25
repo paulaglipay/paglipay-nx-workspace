@@ -8,13 +8,21 @@ export function ThreeColumnCard(props: ThreeColumnCardProps) {
   return (
     <Layout
       jsonData={[
-    {
-      code: 'a',
-      componentType: 'ProductReviewCard',
-      props: {
-        title: 'ProductReviewCard',
-      },
-    },
+        {
+          code: 'a',
+          componentType: 'CardPlaceholder',
+          props: {
+            title: 'CardPlaceholderProps',
+          },
+        },
+        {
+          code: '5',
+          componentType: 'ProductReviewCard',
+          props: {
+            title: 'I Love It! Five Stars',
+            rating: 5,
+          },
+        },
       ]}
       sections={[
         {
