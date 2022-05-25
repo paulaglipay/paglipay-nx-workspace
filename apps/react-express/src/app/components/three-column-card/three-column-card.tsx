@@ -23,13 +23,21 @@ export function ThreeColumnCard(props: ThreeColumnCardProps) {
             rating: 5,
           },
         },
+        {
+          code: '4',
+          componentType: 'ProductReviewCard',
+          props: {
+            title: '4',
+            rating: 4,
+          },
+        },
       ]}
       sections={[
         {
           title: 'Section Title',
           fluid: true,
           cols: ['4', '4', '4', '4', '4', '4'],
-          featureTypesArry: ['a', 'a'],
+          featureTypesArry: ['a', '4', '5'],
         },
         {
           title: 'Section Title',
