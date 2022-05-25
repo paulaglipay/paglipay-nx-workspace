@@ -14,10 +14,10 @@ DLayout.defaultProps = {
       <h1>{'hi'}</h1>
     </div>,
     <div>
-      <h1>{'hi'}</h1>
+      <h1>{'hi2'}</h1>
     </div>,
     <div>
-      <h1>{'hi'}</h1>
+      <h1>{'hi3'}</h1>
     </div>,
   ],
 };

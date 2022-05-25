@@ -1,13 +1,49 @@
 import styles from './layout-render.module.css';
-
+import React, { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
+import DLayout from '../dlayout/dlayout';
 /* eslint-disable-next-line */
-export interface LayoutRenderProps {}
+export interface LayoutRenderProps {
+  fluid: boolean;
+  features: any[];
+  cols: string[];
+}
+
+LayoutRender.defaultProps = {
+  fluid: true,
+  cols: ['4', '4', '4'],
+  features: [
+    <div>
+      <h1>{'qwe'}</h1>
+    </div>,
+    <div>
+      <h1>{'qwe'}</h1>
+    </div>,
+    <div>
+      <h1>{'qwe'}</h1>
+    </div>,
+  ],
+};
 
 export function LayoutRender(props: LayoutRenderProps) {
+  // const res = props.jsonData.reduce(
+  //   (acc: any, curr: any, i: any) => (
+  //     (acc[curr.code] = React.createElement(
+  //       props.components[props.jsonData[i].componentType],
+  //       props.jsonData[i].props
+  //     )),
+  //     acc
+  //   ),
+  //   {}
+  // );
+
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to LayoutRender!</h1>
-    </div>
+    <Container
+      fluid={props.fluid}
+      // style={{ backgroundColor: 'white', padding: '25px', marginBottom: '25px' }}
+    >
+      <DLayout cols={props.cols} features={props.features} />
+    </Container>
   );
 }
 

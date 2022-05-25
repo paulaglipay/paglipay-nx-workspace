@@ -22,8 +22,16 @@ export const App = () => {
     <Container>
       <div style={{ textAlign: 'center' }}>
         <h1>Welcome react-express</h1>
-        <Layout/>
-        <LayoutRender/>
+        <Layout />
+        <LayoutRender
+          // features={[
+          //   <ProductCarousel />,
+          //   <ProductImages />,
+          //   <ProductReviewCard />,
+          //   <ProductPurchaseCard />,
+          // ]}
+          // cols={['z', '4', '5', '3']}
+        />
         <DLayout
           features={[
             <ProductCarousel />,
