@@ -22,13 +22,13 @@ Layout.defaultProps = {
     {
       title: 'Section Title',
       fluid: true,
-      cols: ['3', '3', '3', '3', '3', '3', '3'],
+      cols: ['4', '4', '4', '4', '4', '4', '4'],
       featureTypesArry: ['a','a','a'],
     },
     {
       title: 'Section Title',
       fluid: false,
-      cols: ['3', '3', '3', '3', '3', '3', '3'],
+      cols: ['4', '4', '4', '4', '4', '4', '4'],
       featureTypesArry: ['a','a','a'],
     }
   ],
