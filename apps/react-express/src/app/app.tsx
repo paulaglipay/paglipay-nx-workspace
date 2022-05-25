@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Message } from '@create-nx-workspace/api-interfaces';
 import ProductPurchaseCard from './product-purchase-card/product-purchase-card';
 import AggrigateRating from './components/aggrigate-rating/aggrigate-rating';
+import ProductCarousel from './components/product-crousel/product-crousel';
+import ProductImages from './components/product-images/product-images';
 import ProductReviewCard from './product-review-card/product-review-card';
 import DLayout from './components/dlayout/dlayout';
 import LayoutRender from './components/layout-render/layout-render';
@@ -24,11 +26,12 @@ export const App = () => {
         <LayoutRender/>
         <DLayout
           features={[
-            <AggrigateRating />,
+            <ProductCarousel />,
+            <ProductImages />,
             <ProductReviewCard />,
             <ProductPurchaseCard />,
           ]}
-          cols={['4', '5', '3']}
+          cols={['z', '4', '5', '3']}
         />
         {/* <img
           width="450"
