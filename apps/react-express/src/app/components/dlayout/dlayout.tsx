@@ -1,6 +1,7 @@
 import styles from './dlayout.module.css';
 import { Col, Row, Container, Image, Card } from 'react-bootstrap';
 
+import CardPlaceholder from '../card-placeholder/card-placeholder';
 /* eslint-disable-next-line */
 export interface DLayoutProps {
   cols: string[];
@@ -10,15 +11,9 @@ export interface DLayoutProps {
 DLayout.defaultProps = {
   cols: ['4','4','4'],
   features: [
-    <div>
-      <h1>{'hi'}</h1>
-    </div>,
-    <div>
-      <h1>{'hi2'}</h1>
-    </div>,
-    <div>
-      <h1>{'hi3'}</h1>
-    </div>,
+    <CardPlaceholder/>,
+    <CardPlaceholder/>,
+    <CardPlaceholder/>
   ],
 };
 
