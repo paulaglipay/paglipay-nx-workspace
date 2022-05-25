@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+import React, { lazy } from 'react'
+import ProductReviewCard from '../../product-review-card/product-review-card';
 import CardPlaceholder from '../card-placeholder/card-placeholder';
 import LayoutRender from '../layout-render/layout-render';
 import styles from './layout.module.css';
@@ -11,9 +14,17 @@ Layout.defaultProps = {
   jsonData: [
     {
       code: 'a',
-      componentType: 'CardPlaceholderProps',
+      componentType: 'CardPlaceholder',
       props: {
         title: 'CardPlaceholderProps',
+      },
+    },
+    {
+      code: "5",
+      componentType: "ProductReviewCard",
+      props: {
+        title: "I Love It! Five Stars",
+        rating: 5,
       },
     },
     
@@ -35,8 +46,11 @@ Layout.defaultProps = {
 };
 export function Layout(props: LayoutProps) {
   const components = {
-    CardPlaceholder:<CardPlaceholder/>,
-    // ProductReviewCard: require('./ProductReviewCard').default,
+    // CardPlaceholder:<CardPlaceholder/>,
+    // ProductReviewCard: <ProductReviewCard/>,
+
+    CardPlaceholder: require('../card-placeholder/card-placeholder').default,
+    ProductReviewCard: require('../ProductReviewCard/ProductReviewCard').default,
     // ProductPurchaseCard: require('./ProductPurchaseCard').default,
     // ProductImages: require('./ProductImages').default,
     // ReviewCrousel: require('./ReviewCrousel').default,
@@ -65,9 +79,9 @@ export function Layout(props: LayoutProps) {
           <LayoutRender
             key={`prl-${i}`}
             components={components}
-            // jsonData={props.jsonData}
+            jsonData={props.jsonData}
             cols={e.cols}
-            // featureTypesArry={e.featureTypesArry}
+            featureTypesArry={e.featureTypesArry}
             fluid={e.fluid}
           />
         </div>
