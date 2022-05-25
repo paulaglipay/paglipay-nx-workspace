@@ -23,24 +23,7 @@ export const App = () => {
       <div style={{ textAlign: 'center' }}>
         <h1>Welcome react-express</h1>
         <Layout />
-        <LayoutRender
-          // features={[
-          //   <ProductCarousel />,
-          //   <ProductImages />,
-          //   <ProductReviewCard />,
-          //   <ProductPurchaseCard />,
-          // ]}
-          // cols={['z', '4', '5', '3']}
-        />
-        <DLayout
-          features={[
-            <ProductCarousel />,
-            <ProductImages />,
-            <ProductReviewCard />,
-            <ProductPurchaseCard />,
-          ]}
-          cols={['z', '4', '5', '3']}
-        />
+
         {/* <img
           width="450"
           src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"

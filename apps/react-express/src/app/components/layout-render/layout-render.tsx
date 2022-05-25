@@ -2,27 +2,27 @@ import styles from './layout-render.module.css';
 import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import DLayout from '../dlayout/dlayout';
+
+import CardPlaceholder from '../card-placeholder/card-placeholder';
 /* eslint-disable-next-line */
 export interface LayoutRenderProps {
   fluid: boolean;
   features: any[];
   cols: string[];
+  components:any;
 }
 
 LayoutRender.defaultProps = {
   fluid: true,
   cols: ['4', '4', '4'],
   features: [
-    <div>
-      <h1>{'qwe'}</h1>
-    </div>,
-    <div>
-      <h1>{'qwe'}</h1>
-    </div>,
-    <div>
-      <h1>{'qwe'}</h1>
-    </div>,
+    <CardPlaceholder/>,
+    <CardPlaceholder/>,
+    <CardPlaceholder/>
   ],
+  components:{
+    CardPlaceholder:<CardPlaceholder/>,
+  }
 };
 
 export function LayoutRender(props: LayoutRenderProps) {
