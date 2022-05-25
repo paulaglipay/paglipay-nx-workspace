@@ -10,6 +10,7 @@ import LayoutRender from './components/layout-render/layout-render';
 import { Container } from 'react-bootstrap';
 import Layout from './components/layout/layout';
 import ThreeColumnCard from './components/three-column-card/three-column-card';
+import FourColumnCard from './components/four-column-card/four-column-card';
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
 
@@ -20,11 +21,10 @@ export const App = () => {
   }, []);
 
   return (
-    <Container>
+    <>
       <div style={{ textAlign: 'center' }}>
-        <ProductReviewCard/>
-        <h1>Welcome react-express</h1>
-        <ThreeColumnCard/>
+        <ThreeColumnCard />
+        <FourColumnCard />
         {/* <Layout /> */}
 
         {/* <img
@@ -34,7 +34,7 @@ export const App = () => {
         /> */}
       </div>
       <div>{m.message}</div>
-    </Container>
+    </>
   );
 };
 
