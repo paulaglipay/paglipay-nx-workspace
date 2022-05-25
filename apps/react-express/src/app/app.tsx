@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Message } from '@create-nx-workspace/api-interfaces';
 import ProductPurchaseCard from './product-purchase-card/product-purchase-card';
 import AggrigateRating from './components/aggrigate-rating/aggrigate-rating';
-import ProductReviewCard from './product-review-card/product-review-card';
+import ProductCarousel from './components/product-crousel/product-crousel';
+import ProductImages from './components/product-images/product-images';
+import ProductReviewCard from './components/ProductReviewCard/ProductReviewCard'
 import DLayout from './components/dlayout/dlayout';
 import LayoutRender from './components/layout-render/layout-render';
 import { Container } from 'react-bootstrap';
 import Layout from './components/layout/layout';
+import ThreeColumnCard from './components/three-column-card/three-column-card';
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
 
@@ -19,17 +22,11 @@ export const App = () => {
   return (
     <Container>
       <div style={{ textAlign: 'center' }}>
+        <ProductReviewCard/>
         <h1>Welcome react-express</h1>
-        <Layout/>
-        <LayoutRender/>
-        <DLayout
-          features={[
-            <AggrigateRating />,
-            <ProductReviewCard />,
-            <ProductPurchaseCard />,
-          ]}
-          cols={['4', '5', '3']}
-        />
+        <ThreeColumnCard/>
+        {/* <Layout /> */}
+
         {/* <img
           width="450"
           src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
