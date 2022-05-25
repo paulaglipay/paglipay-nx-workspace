@@ -4,7 +4,7 @@ import ProductPurchaseCard from './product-purchase-card/product-purchase-card';
 import AggrigateRating from './components/aggrigate-rating/aggrigate-rating';
 import ProductCarousel from './components/product-crousel/product-crousel';
 import ProductImages from './components/product-images/product-images';
-import ProductReviewCard from './components/ProductReviewCard/ProductReviewCard'
+import ProductReviewCard from './components/ProductReviewCard/ProductReviewCard';
 import DLayout from './components/dlayout/dlayout';
 import LayoutRender from './components/layout-render/layout-render';
 import { Container } from 'react-bootstrap';
@@ -22,8 +22,49 @@ export const App = () => {
 
   return (
     <>
+    <h1>Welcome react-express</h1>
       <div style={{ textAlign: 'center' }}>
-        <ThreeColumnCard />
+        <ThreeColumnCard
+          jsonData={[
+            {
+              code: 'a',
+              componentType: 'CardPlaceholder',
+              props: {
+                title: 'CardPlaceholderProps',
+              },
+            },
+            {
+              code: '5',
+              componentType: 'ProductReviewCard',
+              props: {
+                title: 'I Love It! Five Stars',
+                rating: 5,
+              },
+            },
+            {
+              code: '4',
+              componentType: 'ProductReviewCard',
+              props: {
+                title: '4',
+                rating: 4,
+              },
+            },
+          ]}
+          sections={[
+            {
+              title: 'Section Title',
+              fluid: true,
+              cols: ['4', '4', '4', '4', '4', '4'],
+              featureTypesArry: ['a', 'a', 'a'],
+            },
+            {
+              title: 'Section Title',
+              fluid: false,
+              cols: ['4', '4', '4', '4', '4', '4'],
+              featureTypesArry: ['a'],
+            },
+          ]}
+        />
         <FourColumnCard />
         {/* <Layout /> */}
 
