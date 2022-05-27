@@ -10,4 +10,10 @@ describe('react-express', () => {
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome react-express');
   });
+  it('should display Welcome to api!', () => {
+    // Function helper example, see `../support/app.po.ts` file
+    getGreeting().contains('Welcome to api!');
+  });
 });
+
+

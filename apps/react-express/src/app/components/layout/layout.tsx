@@ -20,6 +20,13 @@ Layout.defaultProps = {
       },
     },
     {
+      code: 'p',
+      componentType: 'ProductPurchaseCard',
+      props: {
+        title: 'ProductPurchaseCard',
+      },
+    },
+    {
       code: "5",
       componentType: "ProductReviewCard",
       props: {
@@ -51,7 +58,7 @@ export function Layout(props: LayoutProps) {
 
     CardPlaceholder: require('../card-placeholder/card-placeholder').default,
     ProductReviewCard: require('../ProductReviewCard/ProductReviewCard').default,
-    // ProductPurchaseCard: require('./ProductPurchaseCard').default,
+    ProductPurchaseCard: require('../../product-purchase-card/product-purchase-card').default,
     // ProductImages: require('./ProductImages').default,
     // ReviewCrousel: require('./ReviewCrousel').default,
     // ProductCrousel: require('./ProductCrousel').default,

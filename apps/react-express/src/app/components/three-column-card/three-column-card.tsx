@@ -10,31 +10,38 @@ export interface ThreeColumnCardProps {
 export function ThreeColumnCard(props: ThreeColumnCardProps) {
   return (
     <Layout
-      jsonData={[
-        {
-          code: 'a',
-          componentType: 'CardPlaceholder',
-          props: {
-            title: 'CardPlaceholderProps',
-          },
-        },
-        {
-          code: '5',
-          componentType: 'ProductReviewCard',
-          props: {
-            title: 'I Love It! Five Stars',
-            rating: 5,
-          },
-        },
-        {
-          code: '4',
-          componentType: 'ProductReviewCard',
-          props: {
-            title: '4',
-            rating: 4,
-          },
-        },
-      ]}
+      // jsonData={[
+      //   {
+      //     code: 'a',
+      //     componentType: 'CardPlaceholder',
+      //     props: {
+      //       title: 'CardPlaceholderProps',
+      //     },
+      //   },
+      //   {
+      //     code: 'p',
+      //     componentType: 'ProductPurchaseCard',
+      //     props: {
+      //       title: 'ProductPurchaseCard',
+      //     },
+      //   },
+      //   {
+      //     code: '5',
+      //     componentType: 'ProductReviewCard',
+      //     props: {
+      //       title: 'I Love It! Five Stars',
+      //       rating: 5,
+      //     },
+      //   },
+      //   {
+      //     code: '4',
+      //     componentType: 'ProductReviewCard',
+      //     props: {
+      //       title: '4',
+      //       rating: 4,
+      //     },
+      //   },
+      // ]}
       sections={[
         {
           title: 'Section Title',
@@ -46,7 +53,7 @@ export function ThreeColumnCard(props: ThreeColumnCardProps) {
           title: 'Section Title',
           fluid: false,
           cols: ['4', '4', '4', '4', '4', '4'],
-          featureTypesArry: ['a'],
+          featureTypesArry: ['p'],
         },
       ]}
     />
