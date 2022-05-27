@@ -24,8 +24,7 @@ export const App = () => {
   return (
     <>
       <Badge bg="success">{m.message}</Badge>
-
-      <h1>Welcome react-express</h1>
+      <h1>Welcome react-express!</h1>
       <div style={{ textAlign: 'center' }}>
         <ThreeColumnCard
           jsonData={[
