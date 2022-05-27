@@ -23,9 +23,8 @@ export const App = () => {
 
   return (
     <>
-      <div>
-        <Badge bg="success">{m.message}</Badge>
-      </div>
+      <Badge bg="success">{m.message}</Badge>
+
       <h1>Welcome react-express</h1>
       <div style={{ textAlign: 'center' }}>
         <ThreeColumnCard

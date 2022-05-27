@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(CLIENT_BUILD_PATH));
 
 
-const greeting: Message = { message: 'Welcome to api!' };
+const greeting: Message = { message: 'Connected to api!' };
 
 app.get('/api', (req, res) => {
   res.send(greeting);
