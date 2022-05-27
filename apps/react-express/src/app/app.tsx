@@ -22,6 +22,7 @@ export const App = () => {
 
   return (
     <>
+    <h1>{m.message}</h1>
     <h1>Welcome react-express</h1>
       <div style={{ textAlign: 'center' }}>
         <ThreeColumnCard
@@ -74,7 +75,6 @@ export const App = () => {
           alt="Nx - Smart, Fast and Extensible Build System"
         /> */}
       </div>
-      <div>{m.message}</div>
     </>
   );
 };
