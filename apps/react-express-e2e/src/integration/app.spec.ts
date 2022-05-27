@@ -1,4 +1,4 @@
-import { getGreeting } from '../support/app.po';
+import { getGreeting, getBadge } from '../support/app.po';
 
 describe('react-express', () => {
   beforeEach(() => cy.visit('/'));
@@ -10,9 +10,9 @@ describe('react-express', () => {
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains('Welcome react-express');
   });
-  it('should display Welcome to api!', () => {
+  it('should display Connected to api!', () => {
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to api!');
+    getBadge().contains('Connected to api!');
   });
 });
 

@@ -11,6 +11,7 @@ import { Container } from 'react-bootstrap';
 import Layout from './components/layout/layout';
 import ThreeColumnCard from './components/three-column-card/three-column-card';
 import FourColumnCard from './components/four-column-card/four-column-card';
+import { Badge } from 'react-bootstrap';
 export const App = () => {
   const [m, setMessage] = useState<Message>({ message: '' });
 
@@ -22,8 +23,9 @@ export const App = () => {
 
   return (
     <>
-    <h1>{m.message}</h1>
-    <h1>Welcome react-express</h1>
+      <Badge bg="success">{m.message}</Badge>
+
+      <h1>Welcome react-express</h1>
       <div style={{ textAlign: 'center' }}>
         <ThreeColumnCard
           jsonData={[
